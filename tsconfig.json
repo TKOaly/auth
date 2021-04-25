@@ -17,6 +17,9 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true
   },
-  "include": ["src/**/*.ts", "knexfile.ts"],
-  "exclude": ["node_modules", "dist"]
+  "include": ["src/**/*.ts", "scripts/**/*.ts", "knexfile.ts"],
+  "exclude": ["node_modules", "dist"],
+  "ts-node": {
+    "files": true
+  },
 }

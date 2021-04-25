@@ -4,9 +4,7 @@ on: [push]
 jobs:
 
   build:
- 
     runs-on: ubuntu-latest
- 
     steps:
     - uses: actions/checkout@v1
     - name: Build project
@@ -15,7 +13,7 @@ jobs:
       run: |
         docker-compose up -d mysql
         sleep 5
-        docker-compose run web npm run db:init
+        docker-compose run web npm run ci:db:init
     - name: Run linter
       run: docker-compose run web npm run lint
     - name: Run typecheck

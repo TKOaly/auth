@@ -18,6 +18,7 @@
     "create-uuid": "ts-node scripts/create_uuid.ts",
     "generate-doc": "typedoc --ignoreCompilerErrors --out ./doc/ src/**/*.ts",
     "db:init": "ts-node scripts/create_databases.ts",
+    "ci:db:init": "node ./dist/scripts/create_databases.ts",
     "migrate": "knex migrate:latest",
     "rollback": "knex migrate:rollback",
     "seed": "knex seed:run",
